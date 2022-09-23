@@ -1,6 +1,18 @@
 # push
 
 ```
+GITHUB_ACTOR=suzuki-shunsuke
+GITHUB_BASE_REF=
+GITHUB_EVENT_NAME=push
+GITHUB_HEAD_REF=
+GITHUB_REF=refs/heads/ci/setup
+GITHUB_REF_NAME=ci/setup
+GITHUB_REPOSITORY=gha-trigger/test-default-envs
+GITHUB_REPOSITORY_OWNER=gha-trigger
+GITHUB_SHA=ab581c6b01701bf910637465e926199bf0ce9cf2
+```
+
+```
 GITHUB_WORKSPACE=/home/runner/work/test-default-envs/test-default-envs
 GITHUB_PATH=/home/runner/work/_temp/_runner_file_commands/add_path_1ba56450-84c3-478f-82b6-c24e1bb1215e
 GITHUB_ACTION=__run_2
