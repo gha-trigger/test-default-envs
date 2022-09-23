@@ -43,4 +43,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "$GITHUB_EVENT_NAME"
-      - run: env | grep "GITHUB_"
+      - run: env | grep "GITHUB_" | sort
+      - run: |
+          cat <<EOF
+          GITHUB_ACTOR=$GITHUB_ACTOR
+          GITHUB_BASE_REF=$GITHUB_BASE_REF
+          GITHUB_EVENT_NAME=$GITHUB_EVENT_NAME
+          GITHUB_HEAD_REF=$GITHUB_HEAD_REF
+          GITHUB_REF=$GITHUB_REF
+          GITHUB_REF_NAME=$GITHUB_REF_NAME
+          GITHUB_REPOSITORY=$GITHUB_REPOSITORY
+          GITHUB_REPOSITORY_OWNER=$GITHUB_REPOSITORY_OWNER
+          GITHUB_SHA=$GITHUB_SHA
+          EOF
