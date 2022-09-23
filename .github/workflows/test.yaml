@@ -1,0 +1,46 @@
+name: test
+
+on:
+  - branch_protection_rule
+  - check_run
+  - check_suite
+  - create
+  - delete
+  - deployment
+  - deployment_status
+  - discussion
+  - discussion_comment
+  - fork
+  - gollum
+  - issue_comment
+  - issues
+  - label
+  - merge_group
+  - milestone
+  - page_build
+  - project
+  - project_card
+  - project_column
+  - public
+  - pull_request
+  - pull_request_review
+  - pull_request_review_comment
+  - push
+  - registry_package
+  - release
+  - repository_dispatch
+  - schedule
+  - status
+  - watch
+  - workflow_call
+  - workflow_dispatch
+  # `on.workflow_run` does not reference any workflows.
+  # See https://docs.github.com/actions/learn-github-actions/events-that-trigger-workflows#workflow_run for more information
+  # - workflow_run
+
+jobs:
+  show-envs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "$GITHUB_EVENT_NAME"
+      - run: env | grep "GITHUB_"
